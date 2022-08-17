@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && NODE_ENV=production firebase deploy --only functions"
+    "deploy": "npm run build && rm -rf functions/.next && mv .next functions/.next && NODE_ENV=production firebase deploy --only functions"
   },
   "dependencies": {
     "axios": "^0.27.2",
